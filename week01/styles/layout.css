@@ -8,11 +8,6 @@
     grid-template-rows: auto 1fr auto;
 }
 
-header {
-    display: grid;
-    grid-template-rows: auto auto;
-}
-
 .header-content {
     min-height: 15vh;
     background-color: #333;
