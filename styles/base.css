@@ -1,0 +1,150 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #333;
+    --accent1-color: black;
+    --accent2-color: lightgreen;
+    --heading-font: 'Cormorant Garamond', serif;
+    --body-font: Roboto, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+} 
+
+#course-title {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+h1{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.navigation {
+	display: flex;
+    justify-content: space-around;
+	background-color: var(--accent1-color);
+    padding: 0.75rem;
+}
+
+.navigation a {
+	text-decoration: none;
+    color: var(--primary-color);
+}
+
+.navigation a:hover {
+    color: var(--accent2-color);
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+main {
+    width: 95%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.profile-image {
+    float: right;
+    max-width: 150px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 5px 5px 0 0;
+    padding: 0.5rem;
+    text-align: center; 
+}
+
+.about-me {
+    padding: 1.5rem;
+}
+
+.about-country {
+    display: grid;
+    grid-template-columns: auto 2fr 1fr;
+    margin-top: -2rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+h3 {
+    margin: 2rem 1rem;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+figure img {
+    float: left;
+    max-width: 150px;
+    display: block;
+}
+
+figcaption {
+    display: block;
+    font-size: small;
+    font-style: italic;
+    margin-top: 6rem;
+}
+
+.about-country p {
+    position: relative;
+    bottom: 1.2rem;
+}
+
+.web-dev {
+    position: relative;
+}
+
+ul {
+    position: absolute;
+    top: 10rem;
+    left: 3rem;
+}
+
+#lastModified {
+    margin-top: 0.5rem;
+    color: var(--accent2-color)
+}
+
+footer {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1rem;
+}
+
