@@ -52,7 +52,7 @@ h1{
     color: var(--accent2-color);
     font-weight: bold;
     text-decoration: underline;
-    text-underline-offset: 5px;
+    text-underline-offset: 2px;
 }
 
 main {
