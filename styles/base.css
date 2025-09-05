@@ -138,6 +138,10 @@ ul {
     left: 3rem;
 }
 
+ul li {
+    margin: 0.5rem 0;
+}
+
 #lastModified {
     margin-top: 0.5rem;
     color: var(--accent2-color)
