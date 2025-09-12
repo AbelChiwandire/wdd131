@@ -108,6 +108,10 @@ main {
   height: auto;
 }
 
+figcaption {
+    text-align: center;
+}
+
 footer {
     text-align: center;
     background-color: var(--secondary-color);
