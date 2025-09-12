@@ -25,9 +25,9 @@
     }
 
     .navigation a:hover {
-        background-color: white;
-        color: black;
-        border-color: white;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border-color: var(--primary-color);
         transform: none;
         box-shadow: none;
     }

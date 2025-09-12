@@ -1,6 +1,8 @@
 :root {
     --primary-color: white;
-    --secondary-color: #333;
+    --secondary-color: black;
+    --heading-font: 'Cormorant Garamond', serif;
+    --body-font: Roboto, sans-serif;
 }
 
 * {
@@ -10,14 +12,14 @@
 }
 
 header {
-    background-color: black;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 1rem;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--heading-font);
 }
 
 body {
-    font-family: Roboto, sans-serif;
+    font-family: var(--body-font);
 }
 
 .header-top {
@@ -36,7 +38,7 @@ body {
 
 .navigation a {
     display: block;
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     text-align: center;
     font-size: 1.25rem;
@@ -47,9 +49,9 @@ body {
 
 nav a:hover{
     transform: translateY(-2px);
-    border-color: white;
+    border-color: var(--primary-color);
     border-radius: 10px;
-    box-shadow: 0 8px 20px white;
+    box-shadow: 0 8px 20px var(--primary-color);
 }
 
 nav {
@@ -65,7 +67,7 @@ nav.open {
     border: none;
     cursor: pointer;
     line-height: 1;
-    color: white;
+    color: var(--primary-color);
 }
 
 #menu::before {
@@ -108,8 +110,8 @@ main {
 
 footer {
     text-align: center;
-    background-color: black;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 1rem;
     margin-top: 1rem;
 }
