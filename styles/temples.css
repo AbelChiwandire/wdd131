@@ -84,7 +84,7 @@ nav.open {
 h2 {
     text-align: center;
     margin: 1rem 0;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--heading-font);
     font-size: 2rem;
 }
 
