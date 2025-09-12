@@ -1,0 +1,38 @@
+@media screen and (min-width: 57rem) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: block;        
+    }
+
+    .navigation {
+        flex-direction: row; 
+        justify-content: flex-end;
+    }
+
+    .navigation a {
+        margin: 0 1rem;
+        width: auto;
+    }
+
+    .navigation a:hover {
+        background-color: white;
+        color: black;
+        border-color: white;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
