@@ -23,7 +23,9 @@ header {
     padding: 1rem;
 }
 
- h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--heading-font);
     font-size: 2rem;
     margin: 0.5rem 0;
@@ -36,7 +38,8 @@ header {
     border-bottom: 7px solid var(--accent1-color);
 }
 
-h2, h3 {
+h2,
+h3 {
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
@@ -53,17 +56,19 @@ h2, h3 {
     font-weight: bold;
 }
 
-#weather-title::after {
+.weather-icon {
     display: block;
-    content: url("../images/weather-icon.svg");
-    margin: 0 auto;
+    margin: -2rem auto;
     width: 9rem;
     height: auto;
 }
 
+#weather-title::after {
+    content: none;
+}
+
 .weather-card dl {
-    margin-top: -2rem;
-    margin-bottom: 1.5rem;
+    margin: 2rem;
 }
 
 footer {
@@ -99,28 +104,22 @@ footer {
         right: 3%;
     }
 
-    #weather-title::after {
-        display: inline-block;
-        content: ☀️;
-        width: 3rem;
-        height: auto;
-        vertical-align: middle;
-        
+    .weather-icon {
+        display: none;
     }
 
-    .weather-card dl {
-    margin-top: 2rem;
-    
+    #weather-title::after {
+        display: inline-block;
+        content: "☀️";
+        width: 3rem;
+        height: auto;
     }
 
     .title {
         background-color: var(--secondary-color);
         color: var(--primary-color);
         margin-left: -25px;
+        padding: 0.5rem;
     }
 
-    h2 {
-        padding-bottom: 0.7rem;
-        padding-top: 0.4rem;
-    }
 }
