@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimbabwe Page</title>
+    <meta name="description" content="This page contains images of Zimbabwean wildlife and outlines the weather conditions.">
+    <meta name="author" content="Abel Chiwandire">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans&family=Merriweather:opsz,wght@18..144,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script defer src="scripts/place.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+    <script defer src="scripts/place.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>ZIMBABWE</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/elephants-large.webp" media="(min-width: 1100px)">
+            <source srcset="images/elephants-medium.webp" media="(min-width: 700px)">
+            <img class="hero" src="images/elephant-small.webp" alt="Elephants under the shade">
+        </picture>
+        <section class="data-card card">
+            <h2 class="title">Data</h2>
+            <dl>
+                <div class="data-layout">
+                    <dt>Area:</dt>
+                    <dd>399 757 km²</dd>
+                </div>
+                <div class="data-layout">
+                    <dt>Population:</dt>
+                    <dd>~17 000 000</dd>
+                </div>
+                <div class="data-layout">
+                    <dt>Capital:</dt>
+                    <dd>Harare</dd>
+                </div>
+                <div class="data-layout">
+                    <dt>Languages:</dt>
+                    <dd>Shona, Ndebele</dd>
+                </div>
+                <div class="data-layout">
+                    <dt>Time Zone:</dt>
+                    <dd>CAT (Central African Time)</dd>
+                </div>
+                <div class="data-layout">
+                    <dt>Calling Code:</dt>
+                    <dd>+263</dd>
+                </div>
+                <div class="data-layout">
+                    <dt>Internet TLD:</dt>
+                    <dd>.zw</dd>
+                </div>
+            </dl>
+        </section>
+        <section class="weather-card card">
+            <h3 id="weather-title" class="title">Weather</h3>
+            <dl>
+                <div class="data-layout">
+                    <dt>Temperature:</dt>
+                    <dd>25 °C</dd>
+                </div>
+                <div class="data-layout">
+                    <dt>Conditions:</dt>
+                    <dd>Warm and Sunny</dd>
+                </div>
+                <div class="data-layout">
+                    <dt>Wind:</dt>
+                    <dd>10 km/h</dd>
+                </div>
+                <div class="data-layout">
+                    <dt>WindChill:</dt>
+                    <dd id="windchill"></dd>
+                </div>
+            </dl>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="current-year"></span> • Abel Chiwandire • South Africa</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
