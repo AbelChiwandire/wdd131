@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+table {
+    margin: 0 auto;
+    border: 1px solid grey;
+    box-shadow: 5px 5px 5px black;
+    border-collapse: collapse;
+    min-width: 350px;
+}
+
+caption {
+    padding: 10px;
+    caption-side: bottom;
+	font-size: .85rem;
+}
+
+thead tr:first-child th, .blank {
+	background-color: black;
+	color: white;
+    padding: 1.5rem;
+}
+
+th, td {
+	padding: 10px;
+	border: 1px solid black;
+}
+
+td {
+	text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: lightgrey;
+}
