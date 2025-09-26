@@ -1,0 +1,34 @@
+@media screen and (min-width: 57rem) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: block;        
+    }
+
+    .navigation {
+        flex-direction: row; 
+        justify-content: flex-end;
+    }
+
+    .navigation a {
+        margin: 0 1rem;
+        width: auto;
+    }
+
+    .navigation a:hover {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border-color: var(--primary-color);
+        transform: none;
+        box-shadow: none;
+    }
+}
