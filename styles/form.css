@@ -33,6 +33,11 @@ main {
     padding: 0.7rem;
 }
 
+.form-container {
+    display: grid;
+    place-items: center;
+}
+
 .form-group {
     margin-bottom: 1rem;
 }
