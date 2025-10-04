@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     let reviewCount = parseInt(localStorage.getItem("reviewCount")) || 0;
+    let reviewCountDisplay = document.getElementById("reviewCountDisplay")
 
     if (localStorage.getItem("submitted") === "true") {
         reviewCount++;
@@ -8,6 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.removeItem("submitted");
     }
 
-    document.getElementById("reviewCountDisplay").textContent = reviewCount;
+    reviewCountDisplay.textContent = `You have submitted ${reviewCount} review${reviewCount === 1 ? "": "s"}.💥`;
 
 });
