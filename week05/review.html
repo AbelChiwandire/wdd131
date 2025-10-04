@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page | WDD 131 |Abel Chiwandire</title>
+    <meta name="description" content="This page contains confirmation of form submission.">
+    <meta name="author" content="Abel Chiwandire">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="../scripts/getdates.js" defer></script>
+    <script src="scripts/review.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="reviewH1">Thank you for your review!</h1>
+    <p class="reviewText">You have submitted <span id="reviewCountDisplay"></span> reviews.💥</p>
+    <a href="form.html" target="_blank">
+        Submit another review
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-left:4px;">
+        <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
+        <path d="M5 5h5V3H3v7h2V5z"/>
+        </svg>
+    </a>
+    <footer>
+        <p>&copy;<span id="current-year"></span> • Abel Chiwandire • South Africa</p>
+        <p id="lastModified"></p>        
+    </footer>
+</body>
+</html>

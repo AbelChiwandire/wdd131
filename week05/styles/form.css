@@ -1,0 +1,157 @@
+:root {
+    --primary-color: aliceblue;
+    --heading-font: 'Cormorant Garamond', serif;
+    --body-font: Roboto, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    width: 100%;
+    font-family: var(--heading-font);
+}
+
+html, body {
+    height: 100%;    
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-family: var(--body-font); 
+}
+
+main {
+    padding: 0.7rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+form {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: antiquewhite;
+    border-radius: 2%;
+}
+
+label,
+.checkbox-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+
+.stars label {
+    display: inline-block;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.stars input {
+    display: none; 
+}
+
+.stars {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.stars label::before {
+    content: "★";
+    color: lightgrey;
+}
+
+.stars input[type="radio"]:checked ~ label::before {
+  color: gold;
+}
+
+.stars label:hover::before {
+  color: gold;
+}
+
+input[type="submit"] {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="text"],
+input[type="submit"] {
+    padding: 1rem;
+    width: 100%;
+}
+
+textarea {
+    height: 100px;
+}
+
+.optional {
+    color: blue;
+    font-size: 0.8rem;
+}
+
+.italic {
+    font-style: italic;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+#lastModified {
+    font-size: 0.8rem;
+}
+
+.reviewH1 {
+    text-align: center;
+    margin: 7rem;
+    font-family: var(--heading-font);
+}
+
+.reviewText {
+    text-align: center;
+    margin: 4rem auto;
+}
+
+.required {
+    color: maroon;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto 6rem auto;
+    
+}
+
+@media screen and (min-width: 40rem) {
+   form {
+    max-width: 650px;
+   } 
+}
