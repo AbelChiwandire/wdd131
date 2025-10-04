@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-image: url('../images/tokenstreet.jpg');
+    background-size: cover;       /* make the image cover the section */
+    background-position: center;  /* center the image */
+    background-repeat: no-repeat; /* prevent tiling */
+}
+
