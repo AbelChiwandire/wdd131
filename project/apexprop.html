@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ApexProp-Home</title>
+    <title>Home | ApexProp</title>
     <meta name="author" content="Abel Chiwandire">
-    <meta name="description" content="This page contain information about Apex Prop Firm website">
+    <meta name="description" content="Join ApexProp to trade funded accounts with real capital.
+            Learn about our challenges, pricing, and trading platforms and start your trading journey today.">
     <link rel="stylesheet" href="styles/apexprop.css">
+    <script src="scripts/apexprop.js" defer></script>
     <script src="../scripts/getdates.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,23 +16,305 @@
 </head>
 <body>
     <main>
-        <header>
-            <div class="logo">
-            <img src="images/logo_copy.svg" alt="Apex Prop Logo">
-            <span>ApexProp</span>
-            </div>
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="tagline">
+        <section class="hero">
+           <picture>
+                <source srcset="images/hero2.webp" media="(min-width: 1100px)">
+                <source srcset="images/hero1.webp" media="(min-width: 599px)">
+                <img class="width-height display-none" src="images/hero3.webp" alt="ApexProp-Home Hero Image">
+            </picture>
+
+            <header class="absolute-header">
+                <div class="header-inner">
+                    <div class="logo">
+                        <img src="images/logo_copy.svg" alt="Apex Prop Logo">
+                        <span>ApexProp</span>
+                    </div>
+
+                    <nav>
+                        <ul class="flex-column navigation">
+                            <li><a href="apexprop.html">Home</a></li>
+                            <li><a href="help.html" target="_blank">FAQs</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="button-padding">
+                            <a class="cta button-padding" href="checkout.html">Start Challenge</a>
+                        </div>
+                    </nav>
+
+                    <button id="menu" aria-label="Toggle menu"></button>
+                </div>
+            </header>
+
+            <section class="tagline">
                 <h1>YOUR TALENT. FUNDED</h1>
+                <p class="margin-bottom">Step into a global community where talent meets opportunity, and traders turn skill into capital.</p>
+                <div class="flex-column flex-row">
+                    <a class="cta button-padding" href="checkout.html">Start Challenge</a>
+                    <a class="cta button-padding explore-more" href="#challenge-info">Explore More</a>
+                </div>
+            </section>
+
+        </section>
+
+        <section class="features">
+            <div class=" flex-column feature-cards button-padding">
+
+                <div class="card">
+                    <img class="width-height" src="images/feature1.webp" alt="Zero Reward Denials" loading="lazy">
+                    <div class="card-text">
+                        <h3>Zero Reward Denials</h3>
+                        <p>Our traders are rewarded fairly — your performance determines your payout, without arbitrary denials.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="width-height" src="images/feature2.webp" alt="Advanced Trading Platforms" loading="lazy">
+                    <div class="card-text">
+                        <h3>Advanced Trading Platforms</h3>
+                        <p>Access professional-grade platforms with intuitive tools and analytics, designed to help you trade efficiently and confidently.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img class="width-height" src="images/feature3.webp" alt="Trusted by 200,000+ Traders" loading="lazy">
+                    <div class="card-text">
+                        <h3>Trusted by 200,000+ Traders</h3>
+                        <p>Join a global community where millions in payouts have been distributed to skilled traders just like you.</p>
+                    </div>
+                </div>
+
             </div>
-        </header>
+        </section>
+
+        <section id="challenge-info">
+            <h2 class="margin-bottom-2rem">Choose Your Account</h2>
+            <div class="steps-acc">
+
+                <div>
+                    <h3 class="group-title">Steps</h3>
+                    <div class="challenge-steps">
+                        <button class="step-btn" data-step="0">1Step</button>
+                        <button class="step-btn" data-step="1">2Step</button>
+                        <button class="step-btn" data-step="2">Instant</button>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="group-title">Account Sizes</h3>
+                    <div class="account-sizes">
+                        <button class="challenge-btn" data-account="0">5K</button>
+                        <button class="challenge-btn" data-account="1">10K</button>
+                        <button class="challenge-btn" data-account="2">25K</button>
+                        <button class="challenge-btn" data-account="3">50K</button>
+                        <button class="challenge-btn" data-account="4">100K</button>
+                    </div>
+                </div>
+            </div>
+
+            <table class="challenge-table">
+                <tbody>
+                    <tr>
+                        <td>Profit Target</td>
+                        <td id="profit-target"></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Loss</td>
+                        <td id="max-loss"></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum Daily Loss</td>
+                        <td id="max-daily-loss"></td>
+                    </tr>
+                    <tr>
+                        <td>Minimum Trading Days</td>
+                        <td id="min-days"></td>
+                    </tr>
+                    <tr>
+                        <td>Leverage</td>
+                        <td id="leverage"></td>
+                    </tr>
+                    <tr>
+                        <td>Profit Share</td>
+                        <td id="profit-share"></td>
+                    </tr>
+                    <tr>
+                        <td>EA's Allowed</td>
+                        <td id="ea-allowed"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="account-purchase">
+                <p>Price: $<span id="account-price"></span></p>
+                <button class="cta button-padding buy-challenge-btn">Buy Challenge</button>
+            </div>
+        </section>
+
+        <section id="trading-platforms">
+            <h2 class="margin-bottom-2rem center-text">Top Trading Platforms</h2>
+            <div class="platform-cards">
+                
+                <!-- MetaTrader 5 -->
+                <div class="platform-card">
+                    <img src="images/metatrader.webp" alt="MetaTrader 5 Logo" loading="lazy">
+                </div>
+
+                <!-- TradeLocker -->
+                <div class="platform-card">
+                    <img src="images/tradelocker.webp" alt="TradeLocker Logo" loading="lazy">
+                </div>
+
+                <!-- Match Trader -->
+                <div class="platform-card">
+                    <img src="images/matchtrader.webp" alt="Match Trader Logo" loading="lazy">
+                </div>
+
+                <!-- CTrader -->
+                <div class="platform-card">
+                    <img src="images/ctrader.webp" alt="CTrader Logo" loading="lazy">
+                </div>
+
+            </div>
+        </section>
+
+        <section id="why-us">
+            <h2 class="margin-bottom-2rem center-text">Why Choose ApexProp</h2>
+            <div class="whyus-cards flex-column feature-cards button-padding">
+
+                <!-- Card 1 -->
+                <div class="whyus-card card">
+                    <img class="width-height" src="images/world.webp" alt="Global Community" loading="lazy">
+                    <div class="card-text">
+                        <h3>Global Community</h3>
+                        <p>Join a diverse network of over 200,000 traders worldwide, sharing strategies and insights.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="whyus-card card">
+                    <img class="width-height" src="images/risk.webp" alt="Risk Management" loading="lazy">
+                    <div class="card-text">
+                        <h3>Expert Risk Management</h3>
+                        <p>Our firm prioritizes capital protection with strict risk controls and real-time monitoring.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="whyus-card card">
+                    <img class="width-height" src="images/funding.webp" alt="Fast Funding" loading="lazy">
+                    <div class="card-text">
+                        <h3>Fast Funding</h3>
+                        <p>Get funded quickly once you meet challenge requirements, so you can start trading immediately.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2 class="margin-bottom-2rem center-text">What Our Traders Say</h2>
+            <div class="testimonial-container">
+                <div class="testimonial-cards">
+
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <p class="margin-bottom-2rem">★★★★★</p>
+                        <p class="margin-bottom-2rem">"ApexProp made getting funded simple and fast. The process is transparent and fair."</p>
+                        <p class="margin-bottom-2rem">~ Alex M.</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <p class="margin-bottom-2rem">★★★★★</p>
+                        <p class="margin-bottom-2rem">"The platforms and analytics tools are top-notch. I feel supported every step of the way."</p>
+                        <p class="margin-bottom-2rem">~ Priya K.</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <p class="margin-bottom-2rem">★★★★★</p>
+                        <p class="margin-bottom-2rem">"Excellent risk management and quick funding. ApexProp helped me take my trading to the next level."</p>
+                        <p class="margin-bottom-2rem">~ David L.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="join-us" class="flex-column">
+            <div>
+                <h3>Join Our Community</h3>
+                <p>Stay updated with the latest challenges, trading tips, and announcements. Sign up for our newsletter!</p>
+            </div>
+
+            <div class="newsletter">
+                <h3>Newsletter</h3>
+                <form id="newsletter-form" class="flex-column" method="get" action="action.html">
+                    <label for="email">Stay updated with our newsletter!</label>
+                    <input type="email" id="email" name="email" placeholder="Enter Your email" required>
+                    <button id="subscribe" class="cta button-padding buy-challenge-btn" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-content flex-column">
+
+            <div class="footer-grid">
+
+                <div class="footer-company">
+                    <div class="logo">
+                        <img src="images/logo_copy.svg" alt="ApexProp Logo">
+                        <p>ApexProp</p>
+                    </div>
+                    <div>
+                        <p class="margin-bottom"><span>Email: </span>info@apexprop.com</p>
+                        <p class="margin-bottom"><span>Address: </span>123 Trading St, Finance City</p>
+                    </div>
+                </div>
+
+                <div class="footer-socials">
+                    <h3>Follow Us</h3>
+                    <ul class="flex-column">
+                        <li><a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook Icon" class="footer-icon"> Facebook</a></li>
+                        <li><a href="https://x.com/home" target="_blank"><img src="images/twitter.svg" alt="Twitter Icon" class="footer-icon"> Twitter</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.svg" alt="Instagram Icon" class="footer-icon"> Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/feed/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn Icon" class="footer-icon"> LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-navigation">
+                    <h3>Navigation</h3>
+                    <ul class="flex-column">
+                        <li><a href="apexprop.html">Home</a></li>
+                        <li><a href="help.html" target="_blank">FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="checkout.html">Start Challenge</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-quick-links">
+                    <h3>Quick Links</h3>
+                    <ul class="flex-column">
+                        <li><a href="https://www.freeprivacypolicy.com/live/2d03a713-85b8-41cc-b412-609d452b4540" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="https://www.freeprivacypolicy.com/live/4e148008-e61f-4c24-934e-bc47a527daf1" target="_blank">Privacy Policy</a></li>
+                        <li><a href="references.html" target="_blank">References</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p>Disclaimer: ApexProp is a proprietary trading firm. Trading involves risk. Past performance does not guarantee future results. By using this site, you agree to our terms and conditions.</p>
+            </div>
+
+            <div class="center-text">
+                <p>&copy;<span id="current-year"></span> • Abel Chiwandire • South Africa</p>
+                <p id="lastModified"></p> 
+            </div>
+
+        </div>
+    </footer>
+
 </body>
 </html>

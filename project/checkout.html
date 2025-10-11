@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | ApexProp</title>
+    <meta name="author" content="Abel Chiwandire">
+    <meta name="description" content="Checkout page for ApexProp challenges. Review your order details and complete your purchase here.">
+    <link rel="stylesheet" href="styles/apexprop.css">
+    <script src="scripts/apexprop.js" defer></script>
+    <script src="scripts/checkout.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body class="clrblack">
+    <section class="black-hero">
+
+        <header>
+            <div class="header-inner">
+
+                <div class="logo">
+                    <img src="images/logo_copy.svg" alt="Apex Prop Logo">
+                    <span>ApexProp</span>
+                </div>
+
+                <nav>
+                    <ul class=" flex-column navigation">
+                        <li><a href="apexprop.html">Home</a></li>
+                        <li><a href="help.html" target="_blank">FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="button-padding">
+                        <a class="cta button-padding" href="checkout.html">Start Challenge</a>
+                    </div>
+                </nav>
+
+                <button id="menu" aria-label="Toggle menu"></button>
+            </div>
+        </header>
+
+        <div class="tagline">
+            <h1>CHECKOUT</h1>
+            <p class="margin-bottom">Almost there, please fill-up all the information and get funded</p>             
+        </div>
+
+    </section>
+    <main>
+        <!-- Product Details -->
+         <div class="padding">
+            <section class="product-details">
+
+                <div class="section-header">
+                    <h2>Product Details</h2>
+                    <a href="apexprop.html#challenge-info" class="change-plan challenge-btn">Change Plan</a>
+                </div>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Challenge</th>
+                            <td id="challenge-type"></td>
+                        </tr>
+                        <tr>
+                            <th>Account Size</th>
+                            <td id="account-size"></td>
+                        </tr>
+                        <tr>
+                            <th>Platform</th>
+                            <td>
+                                <select id="platform-select">
+                                    <option value="MetaTrader 5">MetaTrader 5</option>
+                                    <option value="TradeLocker">TradeLocker</option>
+                                    <option value="Match Trader">Match Trader</option>
+                                    <option value="cTrader">cTrader</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Price</th>
+                            <td id="price"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+        </div>
+
+        <!-- Checkout Form Section -->
+        <section class="checkout-form">
+            <form id="checkout-form" method="get" action="action.html">
+
+                <!-- 1. Customer Information -->
+                <h2>1. Customer Information</h2>
+                <div class="flex-column form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <!-- 2. Billing Information -->
+                <h2>2. Billing Information</h2>
+                <div class="flex-column form-group">
+                    <label for="country">Country/Region</label>
+                    <input type="text" id="country" name="country" placeholder="Enter your country or region" required>
+
+                    <label for="city">Town/City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+
+                    <label for="province">Province</label>
+                    <input type="text" id="province" name="province" placeholder="Enter your province" required>
+
+                    <label for="postal">Postal Code/ZIP</label>
+                    <input type="text" id="postal" name="postal" placeholder="Enter your postal code" required>
+
+                    <label for="address">Street Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your street address" required>
+                </div>
+
+                <!-- 3. Payment Method -->
+                <h2>3. Payment Method</h2>
+                <div class="flex-column form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" maxlength="19" required>
+
+                    <label for="expiry">Expiry (MM/YY)</label>
+                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5" required>
+
+                    <label for="card-code">Card Code (CVC)</label>
+                    <input type="text" id="card-code" name="card-code" placeholder="CVC" maxlength="4" required>
+                </div>
+
+                <button id="place-order" class="place-order-btn challenge-btn" type="submit">Place Order</button>
+
+            </form>
+        </section>
+
+    </main>
+    <footer class="clrblack">
+        <div class="footer-content flex-column">
+
+            <div class="footer-grid">
+
+                <div class="footer-company">
+                    <div class="logo">
+                        <img src="images/logo_copy.svg" alt="ApexProp Logo">
+                        <p>ApexProp</p>
+                    </div>
+                    <div>
+                        <p class="margin-bottom"><span>Email: </span>info@apexprop.com</p>
+                        <p class="margin-bottom"><span>Address: </span>123 Trading St, Finance City</p>
+                    </div>
+                </div>
+
+                <div class="footer-socials">
+                    <h3>Follow Us</h3>
+                    <ul class="flex-column">
+                        <li><a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook Icon" class="footer-icon"> Facebook</a></li>
+                        <li><a href="https://x.com/home" target="_blank"><img src="images/twitter.svg" alt="Twitter Icon" class="footer-icon"> Twitter</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><img src="images/instagram.svg" alt="Instagram Icon" class="footer-icon"> Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/feed/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn Icon" class="footer-icon"> LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-navigation">
+                    <h3>Navigation</h3>
+                    <ul class="flex-column">
+                        <li><a href="apexprop.html">Home</a></li>
+                        <li><a href="help.html" target="_blank">FAQs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="checkout.html">Start Challenge</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-quick-links">
+                    <h3>Quick Links</h3>
+                    <ul class="flex-column">
+                        <li><a href="https://www.freeprivacypolicy.com/live/2d03a713-85b8-41cc-b412-609d452b4540" target="_blank">Terms & Conditions</a></li>
+                        <li><a href="https://www.freeprivacypolicy.com/live/4e148008-e61f-4c24-934e-bc47a527daf1" target="_blank">Privacy Policy</a></li>
+                        <li><a href="references.html" target="_blank">References</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <p>Disclaimer: ApexProp is a proprietary trading firm. Trading involves risk. Past performance does not guarantee future results. By using this site, you agree to our terms and conditions.</p>
+            </div>
+
+            <div class="center-text">
+                <p>&copy;<span id="current-year"></span> • Abel Chiwandire • South Africa</p>
+                <p id="lastModified"></p> 
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
