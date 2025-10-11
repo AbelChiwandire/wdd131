@@ -1,4 +1,12 @@
+const menuBtn = document.getElementById('menu');
+const nav = document.querySelector('nav');
 const sendMessageBtn = document.getElementById('send-message');
+
+// Hamburger menu toggle 
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('open');
+  nav.classList.toggle('open');
+});
 
 sendMessageBtn.addEventListener('click', () => {
     localStorage.setItem('formType', 'send-message');

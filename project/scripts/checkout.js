@@ -1,3 +1,5 @@
+const menuBtn = document.getElementById('menu');
+const nav = document.querySelector('nav');
 // Retrieve stored values
 const storedStep = localStorage.getItem('selectedStep');
 const storedAccount = localStorage.getItem('selectedAccount');
@@ -6,6 +8,12 @@ const storedPrice = localStorage.getItem('selectedPrice');
 const challengeType = document.getElementById('challenge-type');
 const accountSize = document.getElementById('account-size');
 const price = document.getElementById('price');
+
+// Hamburger menu toggle 
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('open');
+  nav.classList.toggle('open');
+});
 
 // Validate that stored values existance
 if (storedStep !== null && storedAccount !== null && storedPrice !== null) {
