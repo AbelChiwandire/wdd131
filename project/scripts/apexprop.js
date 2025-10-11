@@ -1,5 +1,6 @@
 const menuBtn = document.getElementById('menu');
 const nav = document.querySelector('nav');
+const cta = document.querySelector('.hide');
 
 const challengeButtons = document.querySelectorAll('.challenge-btn');
 const stepButtons = document.querySelectorAll('.step-btn');
@@ -54,6 +55,7 @@ const elementIds = [
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('open');
   nav.classList.toggle('open');
+  cta.classList.toggle('open');
 });
 
 // Inject values into html

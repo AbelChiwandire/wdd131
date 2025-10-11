@@ -153,6 +153,10 @@ nav.open {
     left: 0;    
 }
 
+.hide.open {
+    display: none;
+}
+
 #menu {
     background: var(--none);
     border: var(--none);
