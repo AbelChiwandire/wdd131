@@ -82,7 +82,9 @@ function setInitialSelection(stepButtons, challengeButtons) {
     challengeButtons[0].classList.add('selected');
 }
 
-setInitialSelection(stepButtons, challengeButtons);
+if (stepButtons.length && challengeButtons.length) {
+    setInitialSelection(stepButtons, challengeButtons);
+}
 
 const initialIndex = selectedStep * accountsPerStep + selectedAccount;
 updateChallengeTable(initialIndex);
